@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 .container { 
@@ -213,7 +214,7 @@ img {
     margin-bottom:8px;
 }
 
-.team-name,
+/* .team-name,
 .title-portfolio {
     color: #2E2F42;
     font-size: 20px;
@@ -225,7 +226,7 @@ img {
 .team-name {
     margin-bottom: 8px;
     text-align: center;
-}
+} */
 
 .visually-hidden {
   position: absolute;

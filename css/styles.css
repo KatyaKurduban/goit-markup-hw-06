@@ -250,7 +250,98 @@ button {
     }
 
     .mobile-menu-nav {
-        margin-bottom: auto;
+        margin-right: auto;
+        font-style: normal;
+        display: flex;
+
+        margin-bottom: 168px;
+    }
+
+    .mobile-nav {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+    
+        gap: 40px;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .mobile-nav-link {
+        position: relative;
+       font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        transition: color 250ms cubic-bezier(0.4,0,0.2,1);
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .mobile-nav-link.current {
+        color: #404BBF;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link:focus {
+        color: #404bbf;
+    }
+
+     .mobile-menu-address {
+        margin-right: auto;
+        font-style: normal;
+        display: flex;
+
+        margin-bottom: 48px;
+    }
+
+    .mobile-address-list {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .mobile-mail, 
+    .mobile-tel {
+        display: block;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #434455;
+        transition: color 250ms cubic-bezier(0.4,0,0.2,1);
+        text-decoration: none;
+    }
+
+    .mobile-mail:hover,
+    .mobile-mail:focus,
+    .mobile-tel:hover,
+    .mobile-tel:focus {
+        color: #4d5ae5;
+    }
+
+    .mobile-menu-social-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    }
+
+    .mobile-menu-social-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4,0,0.2,1);
+    }
+
+    .mobile-menu-social-link:hover,
+    .mobile-menu-social-link:focus {
+    background:#404BBF;
     }
 
      @media screen and (min-width: 768px) {
@@ -874,11 +965,11 @@ button {
     pointer-events: none;
 }
 
-.backdrop.is-open {
+/* .backdrop.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-}
+} */
 
 .modal {
     position: absolute;

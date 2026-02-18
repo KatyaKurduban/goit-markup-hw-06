@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -105,7 +111,7 @@ button {
     }
 
     .header-logo {
-        padding: 24px;
+        padding: 24px 0;
         margin-right: 120px;
     }
 
@@ -361,6 +367,14 @@ button {
         background-origin: padding-box;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-background.jpg);
         margin: 0 auto;
+    }
+
+        @media (min-resolution: 192dpi) {
+    .section-main {
+        background-image:
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url("../images/hero-background@2x.jpg");
+    }
     }
 
     .section-main .container {
@@ -651,8 +665,7 @@ button {
     }
 
     .portfolio-list-item {
-        max-width: 288px;
-        height: 400px;
+        max-width: 100%;
         transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
         background: #fff;
     }
@@ -669,10 +682,6 @@ button {
         border-top: none;
     }
 
-    .portfolio-card:last-child {
-        margin-bottom: 96px;
-    }
-
     @media screen and (min-width: 768px) {
         .portfolio-section {
         padding: 96px 0;
@@ -686,7 +695,6 @@ button {
 
     .portfolio-list-item {
         max-width: 356px;
-        height: 420px;
         flex-basis: calc((100% - 24px) / 2);
     }
 
@@ -938,6 +946,7 @@ button {
 
     .footer-info {
         margin-right: 120px;
+        margin-left: auto;
     }
 
     .footer-social-info {
@@ -965,11 +974,11 @@ button {
     pointer-events: none;
 }
 
-/* .backdrop.is-open {
+.backdrop.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-} */
+}
 
 .modal {
     position: absolute;

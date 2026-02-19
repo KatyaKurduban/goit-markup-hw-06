@@ -356,7 +356,8 @@ button {
     .features-list {
         flex-wrap: wrap;
         flex-direction: row;
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 72px;
     } 
 
     .features-list-item {
@@ -502,12 +503,14 @@ button {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 64px;
         justify-content: center;
     }
 
     .team-list-item {
         flex-basis: calc((100% - 24px) / 2);
+        max-width: 264px;
     }
 }
 
@@ -517,8 +520,15 @@ button {
     }
 
     .team-list {
-            flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        column-gap: 24px;
+        row-gap: 0;       
      }
+
+    .team-list-item {
+        flex-basis: calc((100% - 72px) / 4);
+        max-width: 264px;
+    }
 }
 
     /* Portfolio */
@@ -539,14 +549,11 @@ button {
 
 .portfolio-list-item {
     max-width: 100%;
-    transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
-    background: #fff;
-}
-
-.portfolio-list-item:hover {
     box-shadow: 0 2px 1px 0 rgba(46,47,66,.08),
                 0 1px 1px 0 rgba(46,47,66,.16),
                 0 1px 6px 0 rgba(46,47,66,.08);
+    transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
+    background: #fff;
 }
 
 .portfolio-card {
@@ -563,12 +570,13 @@ button {
     .portfolio-list {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 72px;
     }
 
     .portfolio-list-item {
         max-width: 356px;
-        flex-basis: calc((100% - 24px) / 2);
+        flex-basis: calc((100% - 48px) / 3);
     }
 
     .portfolio-card:last-child {
@@ -587,9 +595,21 @@ button {
         padding: 120px 0;
     }
 
+    .portfolio-list {
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+
     .portfolio-list-item {
         max-width: 360px;
         position: relative;
+    }
+
+    .portfolio-list-item:hover {
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08),
+                0px 8px 16px rgba(46, 47, 66, 0.16);
     }
 
     .portfolio-image-wrapper {
@@ -799,6 +819,7 @@ button {
     .footer-form-wrapper {
         flex-direction: row;
         align-items: center;
+        gap: 24px;
     }
 
     .form-footer {
@@ -819,7 +840,7 @@ button {
 
     .footer-info {
         margin-right: 120px;
-        margin-left: auto;
+        margin-left: 0;
     }
 
     .footer-social-info {
@@ -828,6 +849,7 @@ button {
 
     .form-footer {
         margin-top: 0;
+        margin-left: auto;
     }
 }
 
@@ -929,6 +951,10 @@ button {
     color: #434455;
     transition: color 250ms cubic-bezier(0.4,0,0.2,1);
     text-decoration: none;
+}
+
+.mobile-menu .mobile-tel {
+  color: #4d5ae5;
 }
 
 .mobile-mail:hover,
